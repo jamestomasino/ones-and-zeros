@@ -8,5 +8,7 @@ def chunks(s, n):
 with open('code.txt') as txt:
     # read in code, but strip linebreaks and spaces
     code=txt.read().replace('\n', '').replace('\r', '').replace(' ', '')
+    # loop through code string in chunks of 8 characters
     for chunk in chunks(code, 8):
+        # convert binary to int, then to ascii character & print
         print (chr(int(chunk, 2)), end='')
